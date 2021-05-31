@@ -1,0 +1,53 @@
+<div class="inicio">
+  <app-header></app-header>
+</div>
+  
+
+  <br><br><br>
+
+  <div class="cuerpo">
+    <div class="container ">
+    
+      <button type="button" class="btn btn-warning">Warning</button>
+      
+      <table class="table caption-top">
+          <caption>Lista de colaboradores</caption>
+          <br>
+          
+          <thead>
+            <tr>
+              <th scope="col">Identificacion</th>
+              <th scope="col">Nombre</th>
+              <th scope="col">Apellido</th>
+              <th scope="col">Estado</th>
+              <th scope="col">Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let colaboradores of colaboradores" (click)="editarColaborador(colaboradores.identificacion)">
+              <td scope="row">{{colaboradores.identificacion}}</td>
+              <td>{{colaboradores.nombre}}</td>
+              <td>{{colaboradores.apellido}}</td>
+              <td>{{colaboradores.estado}}</td>
+              <td>
+                  <button type="button" class="btn btn-success">Editar</button> - 
+                  <button type="button" class="btn btn-warning">Eliminar</button>
+              </td>
+  
+              
+              
+            </tr>
+           
+           
+          </tbody>
+        </table>
+        
+    </div>
+  </div>
+  
+  <div class="final"><app-footer></app-footer></div>
+  
+
+  
+
+  
